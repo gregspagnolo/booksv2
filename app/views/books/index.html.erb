@@ -27,6 +27,9 @@
         <td><%= book.description %></td>
         <td><%= book.amazon_id %></td>
         <td><%= book.rating %></td>
+        <% book.genres.each do |genre| %>
+        <td><%= book.genres.name %></td>
+        <% end %>
         <td><%= image_from_amazon(book.amazon_id) %>
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
